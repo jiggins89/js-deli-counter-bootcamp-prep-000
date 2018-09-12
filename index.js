@@ -22,7 +22,7 @@ function currentLine (line) {
     newArray.push(`${i + 1}. ${line[i]}`)
   }
   
-  return `The line is currently: ${newArray.join('# ')}`
+  return `The line is currently: ${newArray.join(', ')}`
 }
 
 
