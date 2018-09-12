@@ -11,14 +11,16 @@ function nowServing (katzDeliLine) {
   }
 }
 
-function currentLine (katzDeliLine) {
+function currentLine (line) {
+  if (!line.length) {
+    return "There is nobody waiting to be served!"
+  }
+  
   if (katzDeliLine.length > 0) {
     var newArray = []
     for (let i = 0; katzDeliLine.length > i; i++) {
       newArray.push ('${i + 1}. ${katzDeliLine[i]}')
     }
     return 'The line is currently: ${newArray.join(', ')}'
-  }else{
-      return String ("The line is currently empty.");
-   }  
+  }  
 }
