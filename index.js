@@ -19,7 +19,7 @@ function currentLine (line) {
   var newArray = []
   
   for (let i = 0; line.length > i; i++) {
-    newArray.push ('${i + 1}. ${line[i]}')
+    newArray.push('${i + 1}. ${line[i]}')
   }
   
   return String ('The line is currently: ${newArray.join(', ')}')
